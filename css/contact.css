@@ -1,0 +1,166 @@
+/* Contact Section */
+#contact {
+    padding: 3rem 2rem 0rem;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    /* padding-bottom: 0; */
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: rgba(0, 255, 153, 0.8);
+}
+
+/* Contact Form Section */
+#contact-form {
+    padding: 3rem 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contact-form h2 {
+    font-size: 2rem;
+    color: #00ff99;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #c9d1d9;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #c9d1d9;
+    font-family: 'Courier New', Courier, monospace;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #00ff99;
+}
+
+.submit-btn {
+    background-color: #00ff99;
+    color: #0d1117;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: rgba(0, 255, 153, 0.8);
+}
+
+/* Success message */
+.success-message {
+    color: #00ff99;
+    margin-top: 1rem;
+    display: none;
+}
+
+.word-count {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #00ff99;
+    text-align: right;
+}
+
+
+/* Mobile View Animations for Contact Section */
+@media (max-width: 768px) {
+    #contact h2 {
+        animation: fadeIn 0.5s ease-out; /* Fade-in animation for the heading */
+    }
+
+    .contact-info {
+        opacity: 0; /* Start hidden for animation */
+        transform: translateY(20px); /* Start slightly below */
+        animation: slideIn 0.5s ease-out forwards; /* Slide-in animation */
+    }
+
+    #contact-form h2 {
+        animation: fadeIn 0.5s ease-out; /* Fade-in animation for the form heading */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        transition: border-color 0.3s, box-shadow 0.3s; /* Add box-shadow transition */
+    }
+
+    .submit-btn {
+        transition: background-color 0.3s, transform 0.3s; /* Add transform transition */
+    }
+
+    .submit-btn:hover {
+        background-color: rgba(0, 255, 153, 0.8);
+        transform: scale(1.05); /* Slightly enlarge on hover */
+    }
+
+    /* Animation Keyframes */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

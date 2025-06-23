@@ -1,0 +1,202 @@
+/* Base Styles */
+:root {
+    --primary-color: #00ff99;
+    --secondary-color: #00ffcc;
+    --background-color: #12161e;
+    --text-color: #cdd9e5;
+    --hover-color: #58a6ff;
+    --border-color: #333;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Hero Section */
+#hero {
+    padding: 2rem 2rem 4rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    padding-bottom: 20px;
+}
+
+/* About Section */
+/* .about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: auto;
+} */
+
+.about {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    padding-top: 10px;
+}
+
+.about p:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.profile-pic {
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(216, 187, 187, 0.3);
+}
+
+/* Section Styling */
+section {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    border-left: 5px solid var(--primary-color);
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Cursor Animation */
+.cursor {
+    display: inline-block;
+    animation: blink 1s infinite;
+    color: var(--hover-color);
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+/* Responsive Design */
+/* Mobile View Styles */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust base font size for better readability */
+    }
+
+    #hero {
+        padding: 1.5rem 1rem 3rem; /* Adjust padding for mobile */
+    }
+
+    #hero h2 {
+        font-size: 2rem; /* Smaller heading size for mobile */
+        margin-bottom: 0.5rem; /* Reduced margin */
+        animation: fadeIn 0.5s ease-out; /* Fade-in animation */
+    }
+
+    #hero p {
+        font-size: 1rem; /* Smaller paragraph size */
+        opacity: 0.9; /* Slightly increased opacity */
+        padding-bottom: 15px; /* Adjusted padding */
+        animation: fadeIn 0.7s ease-out 0.2s both; /* Fade-in animation */
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+        padding: 2rem 1rem; /* Adjust padding */
+    }
+
+    .about p {
+        font-size: 1rem; /* Smaller font size for mobile */
+        line-height: 1.6; /* Adjust line height */
+        padding: 1rem; /* Adjust padding */
+        margin-bottom: 1rem; /* Add space between paragraphs */
+        animation: slideIn 0.5s ease-out; /* Slide-in animation */
+    }
+
+    .profile-pic {
+        max-width: 90%; /* Make profile picture responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 1rem; /* Add space below the image */
+        animation: scaleIn 0.5s ease-out; /* Scale-in animation */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller heading size for mobile */
+        margin-bottom: 0.5rem; /* Reduced margin */
+        animation: fadeIn 0.5s ease-out; /* Fade-in animation */
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes scaleIn {
+        from {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
+
