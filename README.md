@@ -29,7 +29,7 @@ See [LICENSE](./LICENSE) for full terms.
 If you'd like to connect or collaborate, feel free to reach out:
 
 - 📧 abhishekpratap2004@gmail.com
-- 🌍 [LinkedIn](https://linkedin.com/in/abhish04)
+- 🌍 [LinkedIn](https://www.linkedin.com/in/abhishek-pratap-042a79254)
 - 🌐 [GitHub](https://github.com/Abhish04)
 
 ---
